@@ -1,0 +1,27 @@
+{% load static %}
+
+{% block content %}
+
+<section class="small-banner section">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Single Banner  -->
+            {% for banner in smallbanners %}
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="single-banner">
+                    <img src="{{ banner.imageURL }}" alt="#">
+                    <div class="content">
+                        <p>{{ banner.category_name }}</p>
+                        <h3>{{ banner.content_details }} <br> {{ banner.content_details_br }}</h3>
+                        <a href="#">{{ banner.button_caption }}</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor banner in smallbanners %}
+            <!-- /End Single Banner  -->
+
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

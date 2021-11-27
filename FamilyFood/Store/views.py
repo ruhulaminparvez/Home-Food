@@ -3,10 +3,14 @@ from django.http import JsonResponse
 import json
 import datetime
 
+from .models import *
 
 
 def home(request):
-    return render(request, 'home.html')
+    trendingitems = TrendingItem.objects.all()
+    context = {'trendingitems': trendingitems}
+
+    return render(request, 'home.html', context)
 
 def cart(request):
     return render(request, 'cart.html')
@@ -19,6 +23,13 @@ def contact(request):
 
 def blog(request):
     return render(request, 'blog-single-sidebar.html')
+
+
+def small_banner(request):
+    smallbanners = SmallBanner.objects.all()
+    context = {'smallbanners': smallbanners}
+
+    return render(request, 'small-banner.html', context)
 
 
 
