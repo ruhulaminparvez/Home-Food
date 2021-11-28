@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #Apps
-    'Store.apps.StoreConfig',
-
+    'category.apps.CategoryConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -73,6 +73,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'FamilyFood.wsgi.application'
+
+AUTH_USER_MODEL = 'accounts.Account'
 
 
 # Database
