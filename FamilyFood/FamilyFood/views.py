@@ -1,8 +1,17 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from store.models import *
+
 
 
 def home(request):
-    return render(request, 'home.html')
+    products = Product.objects.all().filter(is_available=True)
+
+    context = {  
+        'products': products  
+        }
+
+    return render(request, 'home.html', context)
 
 def cart(request):
     return render(request, 'cart.html')

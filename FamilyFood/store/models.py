@@ -18,3 +18,6 @@ class Product(models.Model):
         return self.product_name
 
 
+
+
+
