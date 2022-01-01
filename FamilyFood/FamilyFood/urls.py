@@ -30,6 +30,8 @@ urlpatterns = [
     path('checkout/', views.checkout, name="checkout"),
     path('contact/', views.contact, name="contact"),
     path('blog/', views.blog, name="blog"),
+    path('login-registration/', views.login_registration, name="login-registration"),
+    path('medium-banner/', views.medium_banner, name="medium-banner"),
     # path('small-banner/', views.small_banner, name="small-banner"),
 ]
 

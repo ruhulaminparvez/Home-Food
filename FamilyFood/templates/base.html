@@ -10,10 +10,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Title Tag  -->
-    <title>Family Food - Source of Purity.</title>
+    <title>Home Food - A life full of Tasty Food</title>
 
 	<!-- Favicon -->
-	<link rel="icon" type="image/png" href="{% static 'images/family-food-logo.png' %}">
+	<link rel="icon" type="image/png" href="{% static 'images/home-food-logo.png' %}">
 
 	<!-- Web Font -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -73,8 +73,8 @@
 						<!-- Top Left -->
 						<div class="top-left">
 							<ul class="list-main">
-								<li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
-								<li><i class="ti-email"></i> support@example.com</li>
+								<li><i class="ti-headphone-alt"></i> +88 01700-000000</li>
+								<li><i class="ti-email"></i> support@homefood.com</li>
 							</ul>
 						</div>
 						<!--/ End Top Left -->
@@ -84,9 +84,8 @@
 						<div class="right-content">
 							<ul class="list-main">
 								<li><i class="ti-location-pin"></i> Store location</li>
-								<li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
 								<li><i class="ti-user"></i> <a href="#">My account</a></li>
-								<li><i class="ti-power-off"></i><a href="{% static 'login.html#' %}">Login</a></li>
+								<li><i class="ti-power-off"></i><a href="{% url 'login-registration' %}">Login</a></li>
 							</ul>
 						</div>
 						<!-- End Top Right -->
@@ -101,7 +100,7 @@
 					<div class="col-lg-2 col-md-2 col-12">
 						<!-- Logo -->
 						<div class="logo">
-							<a href="{% url 'home' %}"><img src="{% static 'images/family-food-black.png' %}" alt="logo"></a>
+							<a href="{% url 'home' %}"><img src="{% static 'images\home-food-t.png' %}" alt="logo"></a>
 						</div>
 						<!--/ End Logo -->
 						<!-- Search Form -->
@@ -124,9 +123,15 @@
 							<div class="search-bar">
 								<select>
 									<option selected="selected">All Category</option>
-									<option>watch</option>
-									<option>mobile</option>
-									<option>kid’s item</option>
+									<option>Burger</option>
+									<option>Pizza</option>
+									<option>Hot Wings</option>
+									<option>Sandwiches</option>
+									<option>Drinks</option>
+									<option>Desserts</option>
+									<option>Sweets</option>
+									<option>Juices</option>
+									<option>Cakes</option>
 								</select>
 								<form>
 									<input name="search" placeholder="Search Products Here....." type="search">
@@ -139,30 +144,27 @@
 						<div class="right-bar">
 							<!-- Search Form -->
 							<div class="sinlge-bar">
-								<a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
-							</div>
-							<div class="sinlge-bar">
-								<a href="#" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+								<a href="{% url 'login-registration' %}" class="single-icon"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
 							</div>
 							<div class="sinlge-bar shopping">
-								<a href="#" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
+								<a href="{% url 'cart' %}" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
 								<!-- Shopping Item -->
 								<div class="shopping-item">
 									<div class="dropdown-cart-header">
 										<span>2 Items</span>
-										<a href="#">View Cart</a>
+										<a href="{% url 'cart' %}">View Cart</a>
 									</div>
 									<ul class="shopping-list">
 										<li>
 											<a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
 											<a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
-											<h4><a href="#">Woman Ring</a></h4>
+											<h4><a href="#">Burger</a></h4>
 											<p class="quantity">1x - <span class="amount">$99.00</span></p>
 										</li>
 										<li>
 											<a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
 											<a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
-											<h4><a href="#">Woman Necklace</a></h4>
+											<h4><a href="#">Sandwiches</a></h4>
 											<p class="quantity">1x - <span class="amount">$35.00</span></p>
 										</li>
 									</ul>
@@ -171,7 +173,7 @@
 											<span>Total</span>
 											<span class="total-amount">$134.00</span>
 										</div>
-										<a href="checkout.html" class="btn animate">Checkout</a>
+										<a href="{% url 'checkout' %}" class="btn animate">Checkout</a>
 									</div>
 								</div>
 								<!--/ End Shopping Item -->
@@ -198,9 +200,9 @@
                     <!-- Single Widget -->
                     <div class="single-footer about">
                         <div class="logo">
-                            <a href="{% static 'index.html' %}"><img src="{% static 'images/family-food-white.png' %}" alt="#"></a>
+                            <a href="{% static 'index.html' %}"><img src="{% static 'images/home-food-t.png' %}" alt="#"></a>
                         </div>
-                        <p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue,  magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+                        <p class="text">Homemade food is usually prepared with natural ingredients compared to commercially prepared food. Plainly, the food has its taste however those are ready using unprocessed foods that are by no means healthy.</p>
                         <p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">+0123 456 789</a></span></p>
                     </div>
                     <!-- End Single Widget -->

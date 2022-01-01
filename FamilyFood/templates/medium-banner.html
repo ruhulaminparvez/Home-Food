@@ -1,0 +1,32 @@
+{% load static %}
+
+
+{% block content %}
+
+<!-- Start Midium Banner  -->
+<section class="midium-banner">
+    <div class="container">
+        <div class="row">
+
+            {% for medium in m_banners %}
+            <!-- Single Banner  -->
+            <div class="col-lg-6 col-md-6 col-12">
+                <div class="single-banner">
+                    <img src="{{ medium.m_imageURL }}" alt="#">
+                    <div class="content">
+                        <p>{{ medium.m_tag }}</p>
+                        <h3>{{ medium.m_headline }}</h3>
+                        <a href="#">{{ medium.m_btn_text }}</a>
+                    </div>
+                </div>
+            </div>
+            <!-- /End Single Banner  -->
+
+            {% endfor medium in m_banners %}
+           
+        </div>
+    </div>
+</section>
+<!-- End Midium Banner -->
+
+{% endblock content %}

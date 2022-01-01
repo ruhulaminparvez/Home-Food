@@ -1207,7 +1207,7 @@
 }
 .hero-slider .single-slider {
 	height: auto;
-	background-image: url('https://via.placeholder.com/1900x700');
+	background-image: url('../images/hero-banner.png') !important;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

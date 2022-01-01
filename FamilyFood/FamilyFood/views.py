@@ -1,17 +1,27 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from store.models import *
-
+from django.contrib.auth.forms import UserCreationForm
 
 
 def home(request):
-    products = Product.objects.all().filter(is_available=True)
+    products = Product.objects.all()
 
     context = {  
         'products': products  
         }
 
     return render(request, 'home.html', context)
+
+def medium_banner(request):
+    m_banners = MediumBanner.objects.all()
+
+    context = {  
+        'm_banners': m_banners  
+        }
+
+    return render(request, 'medium-banner.html', context)
+
 
 def cart(request):
     return render(request, 'cart.html')
@@ -26,3 +36,15 @@ def contact(request):
 
 def blog(request):
     return render(request, 'blog.html')
+
+def login_registration(request):
+    form = UserCreationForm()
+
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            
+    context = {'form': form}
+    return render(request, 'login-registration.html')
