@@ -53,7 +53,7 @@ class MediumBanner(models.Model):
         return self.m_headline
 
     @property
-    def imageURL(self):
+    def m_imageURL(self):
         try:
             url = self.m_image.url
         except:

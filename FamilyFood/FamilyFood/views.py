@@ -14,10 +14,10 @@ def home(request):
     return render(request, 'home.html', context)
 
 def medium_banner(request):
-    m_banners = MediumBanner.objects.all()
+    medium_banner = MediumBanner.objects.all()
 
     context = {  
-        'm_banners': m_banners  
+        'medium_banner': medium_banner  
         }
 
     return render(request, 'medium-banner.html', context)
