@@ -87,8 +87,8 @@
 								<div class="nav-inner">	
 									<ul class="nav main-menu menu navbar-nav">
 											<li class="active"><a href="#">Home</a></li>
-											<li><a href="#">Product</a></li>												
-											<li><a href="#">Service</a></li>
+											<li><a href="{% url 'foods' %}">Foods</a></li>												
+											<li><a href="{% url 'service' %}">Service</a></li>
 											<li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
 												<ul class="dropdown">
 													<li><a href="{% url 'cart' %}">Cart</a></li>
@@ -116,7 +116,7 @@
 	<section class="hero-slider">
 		<!-- Single Slider -->
 		<div class="single-slider">
-			<img src="{% static 'images/banner-hero.png' %}" alt="hero-banner">		
+			<img src="{% static 'images/banner-hero-sec.png' %}" alt="hero-banner">		
 			<div class="container">	
 				<div class="row no-gutters">
 					<div class="col-lg-9 offset-lg-3 col-12">
@@ -149,7 +149,7 @@
 				<!-- Single Banner  -->
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="single-banner">
-						<img src="{% static 'images/h-c-1.png'%}" alt="#">
+						<img src="{% static 'images/h-i-1.png'%}" alt="#">
 						<div class="content">
 							<p>Hot Products</p>
 							<h3>Hot<br><span>Burger's</span></h3>
@@ -161,7 +161,7 @@
 				<!-- Single Banner  -->
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="single-banner">
-						<img src="{% static 'images/h-c-2.png'%}" alt="#">
+						<img src="{% static 'images/h-i-2.png'%}" alt="#">
 						<div class="content">
 							<p>Top Products</p>
 							<h3>Hot<br><span>Pizzza's</span></h3>
@@ -173,7 +173,7 @@
 				<!-- Single Banner  -->
 				<div class="col-lg-4 col-12">
 					<div class="single-banner tab-height">
-						<img src="{% static 'images/h-c-3.png'%}" alt="#">
+						<img src="{% static 'images/h-i-3.png'%}" alt="#">
 						<div class="content">
 							<p>Flash Sale</p>
 							<h3>Hot <br> <span>Wing's</span></h3>
@@ -262,7 +262,7 @@
 	{% include 'medium-banner.html' %}
 
 	<!-- Start Midium Banner  -->
-	{% comment %} <section class="midium-banner">
+	<section class="midium-banner">
 		<div class="container">
 			<div class="row">
 				<!-- Single Banner  -->
@@ -270,9 +270,9 @@
 					<div class="single-banner">
 						<img src="https://via.placeholder.com/600x370" alt="#">
 						<div class="content">
-							<p>Man's Collectons</p>
-							<h3>Man's items <br>Up to<span> 50%</span></h3>
-							<a href="#">Shop Now</a>
+							<p>Hot Burger</p>
+							<h3>Off <br>Up to<span> 15%</span></h3>
+							<a href="#">Order Now</a>
 						</div>
 					</div>
 				</div>
@@ -282,16 +282,16 @@
 					<div class="single-banner">
 						<img src="https://via.placeholder.com/600x370" alt="#">
 						<div class="content">
-							<p>shoes women</p>
-							<h3>mid season <br> up to <span>70%</span></h3>
-							<a href="#" class="btn">Shop Now</a>
+							<p>Hot Wings</p>
+							<h3>Off <br> up to <span>30%</span></h3>
+							<a href="#" class="btn">Order Now</a>
 						</div>
 					</div>
 				</div>
 				<!-- /End Single Banner  -->
 			</div>
 		</div>
-	</section> {% endcomment %}
+	</section>
 	<!-- End Midium Banner -->
 	
 	<!-- Start Most Popular -->

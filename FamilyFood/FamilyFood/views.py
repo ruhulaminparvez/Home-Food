@@ -34,8 +34,18 @@ def checkout(request):
 def contact(request):
     return render(request, 'contact.html')
 
-def blog(request):
-    return render(request, 'blog.html')
+
+def service(request):
+    return render(request, 'service.html')
+
+def food(request):
+    products = Product.objects.all()
+
+    context = {  
+        'products': products  
+        }
+
+    return render(request, 'foods.html', context)
 
 def login_registration(request):
     form = UserCreationForm()

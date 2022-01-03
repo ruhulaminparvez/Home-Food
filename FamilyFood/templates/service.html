@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}	
+
+
+<!-- Header Inner -->
+<div class="header-inner">
+	<div class="container">
+		<div class="cat-nav-head">
+			<div class="row">
+				<div class="col-12">
+					<div class="menu-area">
+						<!-- Main Menu -->
+						<nav class="navbar navbar-expand-lg">
+							<div class="navbar-collapse">	
+								<div class="nav-inner">	
+									<ul class="nav main-menu menu navbar-nav">
+										<li class="active"><a href="{% url 'home' %}">Home</a></li>
+										<li><a href="{% url 'foods' %}">Foods</a></li>												
+										<li><a href="{% url 'service' %}">Service</a></li>
+										<li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
+											<ul class="dropdown">
+												<li><a href="{% url 'cart' %}">Cart</a></li>
+												<li><a href="{% url 'checkout' %}">Checkout</a></li>
+											</ul>
+										</li>
+										<li><a href="{% url 'contact' %}">Contact Us</a></li>
+									</ul>
+								</div>
+							</div>
+						</nav>
+						<!--/ End Main Menu -->	
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--/ End Header Inner -->
+</header>
+<!--/ End Header -->
+	<!-- Breadcrumbs -->
+	<div class="breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="bread-inner">
+						<ul class="bread-list">
+							<li><a href="{% url 'home' %}">Home<i class="ti-arrow-right"></i></a></li>
+							<li class="active"><a href="{% url 'service' %}">Service</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Breadcrumbs -->
+
+
+
+    <!-- Start Service -->
+
+   <!-- Start Most Popular -->
+	<div class="product-area most-popular section">
+        <div class="container">
+            <div class="row">
+				<div class="col-12">
+					<div class="section-title">
+						<h2>Service</h2>
+					</div>
+				</div>
+            </div>
+            <div class="row">
+				
+                <div class="col-12">
+                    <div class="owl-carousel popular-slider">
+
+
+						<!-- Start Single Product -->
+						<div class="single-product">
+							<div class="product-img">
+								<a href="{% static '#' %}">
+									<img class="default-img" src="{% static 'images/service-5.gif' %}" alt="#">
+								</a>
+								
+							</div>
+							<div class="product-content">
+								<h3 align="center"><a href="{% static '#' %}">Order Food Easily</a></h3>
+							</div>
+						</div>
+						<!-- End Single Product -->
+
+                        <!-- Start Single Product -->
+						<div class="single-product">
+							<div class="product-img">
+								<a href="{% static '#' %}">
+									<img class="default-img" src="{% static 'images/service-2.gif' %}" alt="#">
+								</a>
+								
+							</div>
+							<div class="product-content">
+								<h3 align="center"><a href="{% static '#' %}">Free Home Delivery</a></h3>
+							</div>
+						</div>
+						<!-- End Single Product -->
+
+                        <!-- Start Single Product -->
+						<div class="single-product">
+							<div class="product-img">
+								<a href="{% static '#' %}">
+									<img class="default-img" src="{% static 'images/service-3.gif' %}" alt="#">
+								</a>
+								
+							</div>
+							<div class="product-content">
+								<h3 align="center"><a href="{% static '#' %}">On Time Receive Delivery</a></h3>
+							</div>
+						</div>
+						<!-- End Single Product -->
+
+
+                        <!-- Start Single Product -->
+						<div class="single-product">
+							<div class="product-img">
+								<a href="{% static '#' %}">
+									<img class="default-img" src="{% static 'images/service-4.gif' %}" alt="#">
+								</a>
+								
+							</div>
+							<div class="product-content">
+								<h3 align="center"><a href="{% static '#' %}">User Friendly</a></h3>
+							</div>
+						</div>
+						<!-- End Single Product -->
+
+
+                        <!-- Start Single Product -->
+						<div class="single-product">
+							<div class="product-img">
+								<a href="{% static '#' %}">
+									<img class="default-img" src="{% static 'images/service-6.gif' %}" alt="#">
+								</a>
+								
+							</div>
+							<div class="product-content">
+								<h3 align="center"><a href="{% static '#' %}">Easy to Use</a></h3>
+							</div>
+						</div>
+						<!-- End Single Product -->
+
+						
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- End Most Popular Area -->
+
+    <!-- End Service -->
+
+<!-- Start Shop Services Area -->
+<section class="shop-services section home">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-rocket"></i>
+                    <h4>Free shiping</h4>
+                    <p>Orders over $100</p>
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-reload"></i>
+                    <h4>Free Return</h4>
+                    <p>Within 30 days returns</p>
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-lock"></i>
+                    <h4>Sucure Payment</h4>
+                    <p>100% secure payment</p>
+                </div>
+                <!-- End Single Service -->
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+                <!-- Start Single Service -->
+                <div class="single-service">
+                    <i class="ti-tag"></i>
+                    <h4>Best Peice</h4>
+                    <p>Guaranteed price</p>
+                </div>
+                <!-- End Single Service -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Shop Services Area -->
+
+<!-- Start Shop Newsletter  -->
+<section class="shop-newsletter section">
+    <div class="container">
+        <div class="inner-top">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-12">
+                    <!-- Start Newsletter Inner -->
+                    <div class="inner">
+                        <h4>Newsletter</h4>
+                        <p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
+                        <form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
+                            <input name="EMAIL" placeholder="Your email address" required="" type="email">
+                            <button class="btn">Subscribe</button>
+                        </form>
+                    </div>
+                    <!-- End Newsletter Inner -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Shop Newsletter -->
+
+{% endblock content %}
