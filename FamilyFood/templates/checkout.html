@@ -115,7 +115,7 @@
 												<option value="AZ">Azerbaijan</option>
 												<option value="BS">Bahamas</option>
 												<option value="BH">Bahrain</option>
-												<option value="BD">Bangladesh</option>
+												<option value="BD" selected="selected">Bangladesh</option>
 												<option value="BB">Barbados</option>
 												<option value="BY">Belarus</option>
 												<option value="BE">Belgium</option>
@@ -328,7 +328,7 @@
 												<option value="UG">Uganda</option>
 												<option value="UA">Ukraine</option>
 												<option value="AE">United Arab Emirates</option>
-												<option value="US" selected="selected">United Kingdom</option>
+												<option value="US">United Kingdom</option>
 												<option value="UY">Uruguay</option>
 												<option value="UM">U.S. Minor Outlying Islands</option>
 												<option value="VI">U.S. Virgin Islands</option>
@@ -349,13 +349,15 @@
 										<div class="form-group">
 											<label>State / Divition<span>*</span></label>
 											<select name="state-province" id="state-province">
-												<option value="divition" selected="selected">New Yourk</option>
-												<option>Los Angeles</option>
-												<option>Chicago</option>
-												<option>Houston</option>
-												<option>San Diego</option>
-												<option>Dallas</option>
-												<option>Charlotte</option>
+												<option value="divition" selected="selected">Dhaka</option>
+												<option>Dhaka</option>
+												<option>Sylhet</option>
+												<option>Chattogram</option>
+												<option>Rajshahi</option>
+												<option>Khulna</option>
+												<option>Mymensingh</option>
+												<option>Barisal</option>
+												<option>Rangpur</option>
 											</select>
 										</div>
 									</div>
@@ -375,20 +377,6 @@
 										<div class="form-group">
 											<label>Postal Code<span>*</span></label>
 											<input type="text" name="post" placeholder="" required="required">
-										</div>
-									</div>
-									<div class="col-lg-6 col-md-6 col-12">
-										<div class="form-group">
-											<label>Company<span>*</span></label>
-											<select name="company_name" id="company">
-												<option value="company" selected="selected">Microsoft</option>
-												<option>Apple</option>
-												<option>Xaiomi</option>
-												<option>Huawer</option>
-												<option>Wpthemesgrid</option>
-												<option>Samsung</option>
-												<option>Motorola</option>
-											</select>
 										</div>
 									</div>
 									<div class="col-12">
@@ -431,7 +419,7 @@
 							<!-- Payment Method Widget -->
 							<div class="single-widget payement">
 								<div class="content">
-									<img src="images/payment-method.png" alt="#">
+									<img src="{% static 'images/cash-payment.png' %}" alt="#">
 								</div>
 							</div>
 							<!--/ End Payment Method Widget -->
