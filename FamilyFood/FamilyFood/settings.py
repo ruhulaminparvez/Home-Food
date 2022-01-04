@@ -40,8 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     #Apps
-    'category.apps.CategoryConfig',
-    'accounts.apps.AccountsConfig',
     'store.apps.StoreConfig',
     'medium_banner.apps.MediumBannerConfig',
     'lower_card.apps.LowerCardConfig',
@@ -77,8 +75,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'FamilyFood.wsgi.application'
-
-AUTH_USER_MODEL = 'accounts.Account'
 
 
 # Database

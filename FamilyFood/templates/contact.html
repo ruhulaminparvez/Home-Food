@@ -73,36 +73,30 @@
 										<div class="col-lg-6 col-12">
 											<div class="form-group">
 												<label>Your Name<span>*</span></label>
-												<input name="name" type="text" placeholder="">
-											</div>
-										</div>
-										<div class="col-lg-6 col-12">
-											<div class="form-group">
-												<label>Your Subjects<span>*</span></label>
-												<input name="subject" type="text" placeholder="">
+												<input name="name" type="text" placeholder="" id="username">
 											</div>
 										</div>
 										<div class="col-lg-6 col-12">
 											<div class="form-group">
 												<label>Your Email<span>*</span></label>
-												<input name="email" type="email" placeholder="">
+												<input name="email" type="email" placeholder="" id="email">
 											</div>	
 										</div>
 										<div class="col-lg-6 col-12">
 											<div class="form-group">
 												<label>Your Phone<span>*</span></label>
-												<input name="company_name" type="text" placeholder="">
+												<input name="company_name" type="text" placeholder="" id="number">
 											</div>	
 										</div>
 										<div class="col-12">
 											<div class="form-group message">
 												<label>your message<span>*</span></label>
-												<textarea name="message" placeholder=""></textarea>
+												<textarea id="message" name="message" placeholder=""></textarea>
 											</div>
 										</div>
 										<div class="col-12">
 											<div class="form-group button">
-												<button type="submit" class="btn ">Send Message</button>
+												<button id="submit" type="submit" class="btn ">Send Message</button>
 											</div>
 										</div>
 									</div>
@@ -169,6 +163,91 @@
 			</div>
 		</div>
 	</section>
+
+
+
+	<!-- loader -->
+	<div class="loader">	
+		
+	</div>
 	<!-- End Shop Newsletter -->
+
+	<script
+			type="text/javascript"
+      
+			src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"
+		></script>
+
+		<!-- Sweet alert js -->
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+		<script type="text/javascript">
+			// User ID
+			// user_id
+			// Access Token
+			// random_access-token
+
+			(function (name, email,msg) {
+				// emailjs.init("USERID");
+				emailjs.init("user_l8qDKoICtQuDkbYomxzkJ");
+			})();
+
+			
+
+			function validate() {
+				let loader = document.querySelector(".loader");
+				let name = document.querySelector("#username");
+				let email = document.querySelector("#email");
+				let msg = document.querySelector("#message");
+				let btn = document.querySelector("#submit");
+
+				btn.addEventListener("click", (e) => {
+					e.preventDefault();
+					if (name.value == "" || email.value == "" || msg.value == "") {
+						emptyerror();
+					} 
+          
+          else {
+						loader.style.display = "flex";
+						sendmail(name.value, email.value, msg.value);
+						success();
+						loader.style.display = "none";
+					}
+				});
+			}
+			validate();
+
+			function sendmail(name, email, msg) {
+				emailjs.send("service_2lrhtuo","template_58jlfat", {
+					to_name: name,
+					from_name: email,
+					message: msg,
+				});
+			}
+
+			function emptyerror() {
+				Swal.fire({
+					icon: "error",
+					title: "Oops...",
+					text: "Fields cannot be empty!",
+				});
+			}
+
+			function error() {
+				Swal.fire({
+					icon: "error",
+					title: "Oops...",
+					text: "Something went wrong!",
+				});
+			}
+
+			function success() {
+				Swal.fire({
+					icon: "success",
+					title: "Good Job",
+					text: "Successfully sent message",
+				});
+			}
+		</script>
 	
 {% endblock content %}

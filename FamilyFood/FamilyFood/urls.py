@@ -32,6 +32,7 @@ urlpatterns = [
     path('foods/', views.food, name="foods"),
     path('service/', views.service, name="service"),
     path('login-registration/', views.login_registration, name="login-registration"),
+    path('update_item/', views.updateItem, name="update_item"),
 ]
 
 
