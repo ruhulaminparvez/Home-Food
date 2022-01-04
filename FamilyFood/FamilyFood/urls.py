@@ -33,6 +33,7 @@ urlpatterns = [
     path('service/', views.service, name="service"),
     path('login-registration/', views.login_registration, name="login-registration"),
     path('update_item/', views.updateItem, name="update_item"),
+    path('process_order/', views.processOrder, name="process_order"),
 ]
 
 

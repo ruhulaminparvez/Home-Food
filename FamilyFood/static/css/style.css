@@ -1207,7 +1207,6 @@
 }
 .hero-slider .single-slider {
 	height: auto;
-	background-image: url('../images/hero-banner.png') !important;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

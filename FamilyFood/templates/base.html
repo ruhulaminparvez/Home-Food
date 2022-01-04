@@ -46,6 +46,8 @@
 	<link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
 
 
 
@@ -200,36 +202,8 @@
 								<a href="#" class="single-icon"><i class="ti-hand-point-right" aria-hidden="true"></i></a>
 							</div>
 							<div class="sinlge-bar shopping">
-								<a href="{% url 'cart' %}" class="single-icon"><i class="ti-bag"></i> <span class="total-count">2</span></a>
-								<!-- Shopping Item -->
-								<div class="shopping-item">
-									<div class="dropdown-cart-header">
-										<span>2 Items</span>
-										<a href="{% url 'cart' %}">View Cart</a>
-									</div>
-									<ul class="shopping-list">
-										<li>
-											<a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-											<a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
-											<h4><a href="#">Burger</a></h4>
-											<p class="quantity">1x - <span class="amount">$99.00</span></p>
-										</li>
-										<li>
-											<a href="#" class="remove" title="Remove this item"><i class="fa fa-remove"></i></a>
-											<a class="cart-img" href="#"><img src="https://via.placeholder.com/70x70" alt="#"></a>
-											<h4><a href="#">Sandwiches</a></h4>
-											<p class="quantity">1x - <span class="amount">$35.00</span></p>
-										</li>
-									</ul>
-									<div class="bottom">
-										<div class="total">
-											<span>Total</span>
-											<span class="total-amount">$134.00</span>
-										</div>
-										<a href="{% url 'checkout' %}" class="btn animate">Checkout</a>
-									</div>
-								</div>
-								<!--/ End Shopping Item -->
+								<a href="{% url 'cart' %}" class="single-icon"><i class="ti-bag"></i> <span class="total-count">{{ cartItems }}</span></a>
+								
 							</div>
 						</div>
 					</div>
@@ -370,5 +344,13 @@
 <script src="{% static 'js/active.js' %}"></script>
 <!-- Card JS -->
 <script src="{% static 'js/cart.js' %}"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </body>
 </html>

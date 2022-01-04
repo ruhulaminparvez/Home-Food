@@ -1,8 +1,6 @@
 import json
 from store.models import *
-from small_banner.models import *
-from lower_card.models import *
-from medium_banner.models import *
+
 
 def cookieCart(request):
     # Create empty cart for now for non-logged in user

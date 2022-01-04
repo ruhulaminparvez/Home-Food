@@ -101,12 +101,12 @@
                                                 </a>
                                                 <div class="button-head">
                                                     <div class="product-action-2">
-                                                        <a title="Add to cart" href="#">Add to cart</a>
+                                                        <a class="add-btn update-cart" data-product="{{ product.id }}" data-action="add" title="Add to cart" href="#">Add to cart</a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="product-content">
-                                                <h3><a href="#">{{ product.product_name }}</a></h3>
+                                                <h3><a href="#">{{ product.name }}</a></h3>
                                                 <div class="product-price">
                                                     <span>${{ product.price|floatformat:2 }}</span>
                                                 </div>

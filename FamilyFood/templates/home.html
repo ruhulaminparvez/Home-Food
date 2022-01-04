@@ -31,9 +31,6 @@
 								<ul class="mega-menu">
 									<li class="single-menu">
 										<a href="#" class="title-link">Hot Burger's</a>
-										<div class="image">
-											<img src="https://via.placeholder.com/225x155" alt="#">
-										</div>
 										<div class="inner-link">
 											<a href="#">Burger</a>
 											<a href="#">Ham Burger</a>
@@ -43,9 +40,6 @@
 									</li>
 									<li class="single-menu">
 										<a href="#" class="title-link">Pizza's</a>
-										<div class="image">
-											<img src="https://via.placeholder.com/225x155" alt="#">
-										</div>
 										<div class="inner-link">
 											<a href="#">Papperony Pizzza</a>
 											<a href="#">Chicken Pizzza</a>
@@ -55,9 +49,6 @@
 									</li>
 									<li class="single-menu">
 										<a href="#" class="title-link">Hot Wing's</a>
-										<div class="image">
-											<img src="https://via.placeholder.com/225x155" alt="#">
-										</div>
 										<div class="inner-link">
 											<a href="#">Wings</a>
 											<a href="#">Chicken Wings</a>
@@ -214,7 +205,7 @@
 														</div>
 													</div>
 													<div class="product-content">
-														<h3><a href="#">{{ product.product_name }}</a></h3>
+														<h3><a href="#">{{ product.name }}</a></h3>
 														<div class="product-price">
 															<span>${{ product.price|floatformat:2 }}</span>
 														</div>
@@ -288,12 +279,12 @@
 								</a>
 								<div class="button-head">
 									<div class="product-action-2">
-										<a title="Add to cart" href="#">Add to cart</a>
+										<a class="add-btn update-cart" data-product="{{ product.id }}" data-action="add" title="Add to cart" href="#">Add to cart</a>
 									</div>
 								</div>
 							</div>
 							<div class="product-content">
-								<h3><a href="{% static '#' %}">{{ product.product_name }}</a></h3>
+								<h3><a href="{% static '#' %}">{{ product.name }}</a></h3>
 								<div class="product-price">
 									<span>${{ product.price|floatformat:2 }}</span>
 								</div>
