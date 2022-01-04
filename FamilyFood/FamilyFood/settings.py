@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'category.apps.CategoryConfig',
     'accounts.apps.AccountsConfig',
     'store.apps.StoreConfig',
+    'medium_banner.apps.MediumBannerConfig',
+    'lower_card.apps.LowerCardConfig',
+    'small_banner.apps.SmallBannerConfig',
 ]
 
 MIDDLEWARE = [

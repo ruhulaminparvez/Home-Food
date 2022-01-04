@@ -1,26 +1,25 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from store.models import *
+from medium_banner.models import *
+from lower_card.models import *
+from small_banner.models import *
 from django.contrib.auth.forms import UserCreationForm
 
 
 def home(request):
     products = Product.objects.all()
+    medium_banners = MediumBanner.objects.all()
+    onsales = OnSale.objects.all()
+    bestsellers = BestSeller.objects.all()
+    topviews = TopView.objects.all()
+    small_banners = SmallBanner.objects.all()
 
     context = {  
-        'products': products  
+        'products': products, 'medium_banners': medium_banners, 'onsales': onsales, 'bestsellers': bestsellers, 'topviews': topviews, 'small_banners': small_banners  
         }
 
     return render(request, 'home.html', context)
-
-def medium_banner(request):
-    medium_banner = MediumBanner.objects.all()
-
-    context = {  
-        'medium_banner': medium_banner  
-        }
-
-    return render(request, 'medium-banner.html', context)
 
 
 def cart(request):

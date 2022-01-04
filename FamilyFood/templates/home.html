@@ -146,42 +146,20 @@
 	<section class="small-banner section">
 		<div class="container-fluid">
 			<div class="row">
+				{% for small in small_banners %}
 				<!-- Single Banner  -->
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="single-banner">
-						<img src="{% static 'images/h-i-1.png'%}" alt="#">
+						<img src="{{ small.s_imageURL }}" alt="#">
 						<div class="content">
-							<p>Hot Products</p>
-							<h3>Hot<br><span>Burger's</span></h3>
-							<a href="#">Discover Now</a>
+							<p>{{ small.s_tag }}</p>
+							<h3>{{ small.s_headline }}<br><span>{{ small.s_span }}</span></h3>
+							<a href="#">{{ small.s_btn_text }}</a>
 						</div>
 					</div>
 				</div>
 				<!-- /End Single Banner  -->
-				<!-- Single Banner  -->
-				<div class="col-lg-4 col-md-6 col-12">
-					<div class="single-banner">
-						<img src="{% static 'images/h-i-2.png'%}" alt="#">
-						<div class="content">
-							<p>Top Products</p>
-							<h3>Hot<br><span>Pizzza's</span></h3>
-							<a href="#">Shop Now</a>
-						</div>
-					</div>
-				</div>
-				<!-- /End Single Banner  -->
-				<!-- Single Banner  -->
-				<div class="col-lg-4 col-12">
-					<div class="single-banner tab-height">
-						<img src="{% static 'images/h-i-3.png'%}" alt="#">
-						<div class="content">
-							<p>Flash Sale</p>
-							<h3>Hot <br> <span>Wing's</span></h3>
-							<a href="#">Discover Now</a>
-						</div>
-					</div>
-				</div>
-				<!-- /End Single Banner  -->
+				{% endfor small in small_banners %}
 			</div>
 		</div>
 	</section>
@@ -259,36 +237,25 @@
 			</div>
 	</div>
 	
-	{% include 'medium-banner.html' %}
 
 	<!-- Start Midium Banner  -->
 	<section class="midium-banner">
 		<div class="container">
 			<div class="row">
+
+				{% for m_banner in medium_banners %}
 				<!-- Single Banner  -->
 				<div class="col-lg-6 col-md-6 col-12">
 					<div class="single-banner">
-						<img src="https://via.placeholder.com/600x370" alt="#">
+						<img src="{{ m_banner.m_imageURL }}" alt="#">
 						<div class="content">
-							<p>Hot Burger</p>
-							<h3>Off <br>Up to<span> 15%</span></h3>
-							<a href="#">Order Now</a>
+							<p>{{ m_banner.m_tag }}</p>
+							<h3>{{ m_banner.m_headline }}</h3>
+							<a href="#">{{ m_banner.m_btn_text }}</a>
 						</div>
 					</div>
 				</div>
-				<!-- /End Single Banner  -->
-				<!-- Single Banner  -->
-				<div class="col-lg-6 col-md-6 col-12">
-					<div class="single-banner">
-						<img src="https://via.placeholder.com/600x370" alt="#">
-						<div class="content">
-							<p>Hot Wings</p>
-							<h3>Off <br> up to <span>30%</span></h3>
-							<a href="#" class="btn">Order Now</a>
-						</div>
-					</div>
-				</div>
-				<!-- /End Single Banner  -->
+				{% endfor m_banner in medium_banners %}
 			</div>
 		</div>
 	</section>
@@ -373,60 +340,27 @@
 							</div>
 						</div>
 					</div>
+					{% for onsale in onsales %}
 					<!-- Start Single List  -->
 					<div class="single-list">
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="list-image overlay">
-									<img src="https://via.placeholder.com/115x140" alt="#">
+									<img src="{{ onsale.os_imageURL }}" alt="#">
 									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12 no-padding">
 								<div class="content">
-									<h4 class="title"><a href="#">Licity jelly leg flat Sandals</a></h4>
-									<p class="price with-discount">$59</p>
+									<h4 class="title"><a href="#">{{ onsale.os_headline }}</a></h4>
+									<p class="price with-discount">${{ onsale.os_price }}</p>
 								</div>
 							</div>
+
 						</div>
 					</div>
 					<!-- End Single List  -->
-					<!-- Start Single List  -->
-					<div class="single-list">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-12">
-								<div class="list-image overlay">
-									<img src="https://via.placeholder.com/115x140" alt="#">
-									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-12 no-padding">
-								<div class="content">
-									<h5 class="title"><a href="#">Licity jelly leg flat Sandals</a></h5>
-									<p class="price with-discount">$44</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- End Single List  -->
-					<!-- Start Single List  -->
-					<div class="single-list">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-12">
-								<div class="list-image overlay">
-									<img src="https://via.placeholder.com/115x140" alt="#">
-									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-12 no-padding">
-								<div class="content">
-									<h5 class="title"><a href="#">Licity jelly leg flat Sandals</a></h5>
-									<p class="price with-discount">$89</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- End Single List  -->
+					{% endfor onsale in onsales %}
 				</div>
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="row">
@@ -436,60 +370,27 @@
 							</div>
 						</div>
 					</div>
+					{% for bestseller in bestsellers%}
 					<!-- Start Single List  -->
 					<div class="single-list">
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="list-image overlay">
-									<img src="https://via.placeholder.com/115x140" alt="#">
+									<img src="{{ bestseller.bs_imageURL }}" alt="#">
 									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12 no-padding">
 								<div class="content">
-									<h5 class="title"><a href="#">Licity jelly leg flat Sandals</a></h5>
-									<p class="price with-discount">$65</p>
+									<h5 class="title"><a href="#">{{ bestseller.bs_headline }}</a></h5>
+									<p class="price with-discount">${{ bestseller.bs_price }}</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- End Single List  -->
-					<!-- Start Single List  -->
-					<div class="single-list">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-12">
-								<div class="list-image overlay">
-									<img src="https://via.placeholder.com/115x140" alt="#">
-									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-12 no-padding">
-								<div class="content">
-									<h5 class="title"><a href="#">Licity jelly leg flat Sandals</a></h5>
-									<p class="price with-discount">$33</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- End Single List  -->
-					<!-- Start Single List  -->
-					<div class="single-list">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-12">
-								<div class="list-image overlay">
-									<img src="https://via.placeholder.com/115x140" alt="#">
-									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-12 no-padding">
-								<div class="content">
-									<h5 class="title"><a href="#">Licity jelly leg flat Sandals</a></h5>
-									<p class="price with-discount">$77</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- End Single List  -->
+					{% endfor bestseller in bestsellers%}
+					
 				</div>
 				<div class="col-lg-4 col-md-6 col-12">
 					<div class="row">
@@ -499,60 +400,27 @@
 							</div>
 						</div>
 					</div>
+					{% for topview in topviews %}
 					<!-- Start Single List  -->
 					<div class="single-list">
 						<div class="row">
 							<div class="col-lg-6 col-md-6 col-12">
 								<div class="list-image overlay">
-									<img src="https://via.placeholder.com/115x140" alt="#">
+									<img src="{{ topview.tv_imageURL }}" alt="#">
 									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
 								</div>
 							</div>
 							<div class="col-lg-6 col-md-6 col-12 no-padding">
 								<div class="content">
-									<h5 class="title"><a href="#">Licity jelly leg flat Sandals</a></h5>
-									<p class="price with-discount">$22</p>
+									<h5 class="title"><a href="#">{{ topview.tv_headline }}</a></h5>
+									<p class="price with-discount">${{ topview.tv_price }}</p>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- End Single List  -->
-					<!-- Start Single List  -->
-					<div class="single-list">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-12">
-								<div class="list-image overlay">
-									<img src="https://via.placeholder.com/115x140" alt="#">
-									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-12 no-padding">
-								<div class="content">
-									<h5 class="title"><a href="#">Licity jelly leg flat Sandals</a></h5>
-									<p class="price with-discount">$35</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- End Single List  -->
-					<!-- Start Single List  -->
-					<div class="single-list">
-						<div class="row">
-							<div class="col-lg-6 col-md-6 col-12">
-								<div class="list-image overlay">
-									<img src="https://via.placeholder.com/115x140" alt="#">
-									<a href="#" class="buy"><i class="fa fa-shopping-bag"></i></a>
-								</div>
-							</div>
-							<div class="col-lg-6 col-md-6 col-12 no-padding">
-								<div class="content">
-									<h5 class="title"><a href="#">Licity jelly leg flat Sandals</a></h5>
-									<p class="price with-discount">$99</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- End Single List  -->
+					{% endfor topview in topviews %}
+					
 				</div>
 			</div>
 		</div>

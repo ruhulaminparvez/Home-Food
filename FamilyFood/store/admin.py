@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Product, MediumBanner
+from .models import Product
 
 # Register your models here.
 class ProductAdmin(admin.ModelAdmin):
@@ -8,8 +8,3 @@ class ProductAdmin(admin.ModelAdmin):
 
 admin.site.register(Product, ProductAdmin)
 
-class MediumBannerAdmin(admin.ModelAdmin):
-    list_display = ['m_image', 'm_tag', 'm_headline', 'm_btn_text']
-    prepopulated_fields = {'slug': ('m_headline',)}
-
-admin.site.register(MediumBanner, MediumBannerAdmin)
