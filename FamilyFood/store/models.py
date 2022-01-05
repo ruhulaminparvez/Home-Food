@@ -3,8 +3,8 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class Product(models.Model):
-    name = models.CharField(max_length=100, unique=True)
-    slug = models.SlugField(max_length=100, unique=True)
+    name = models.CharField(max_length=100, null=True)
+    slug = models.SlugField(max_length=100, null=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(upload_to='photos/products', blank=True)
     image_hover = models.ImageField(upload_to='photos/products', blank=True)
@@ -13,14 +13,6 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-
-    @property
-    def imageURL(self):
-        try:
-            url = self.image.url
-        except:
-            url = ''
-        return url
 
     @property
     def imageURL(self):
@@ -62,9 +54,7 @@ class Order(models.Model):
     def shipping(self):
         shipping = False
         orderitems = self.orderitem_set.all()
-        for i in orderitems:
-            if i.product.digital == False:
-                shipping = True
+        
         return shipping
 
 

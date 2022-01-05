@@ -10,7 +10,7 @@ from lower_card.models import *
 from small_banner.models import *
 from django.contrib.auth.forms import UserCreationForm
 
-from .utils import cookieCart, cartData, guestOrder
+from store.utils import cookieCart, cartData, guestOrder
 
 
 def home(request):
@@ -29,7 +29,7 @@ def home(request):
     small_banners = SmallBanner.objects.all()
 
     context = {  
-        'products': products, 'medium_banners': medium_banners, 'onsales': onsales, 'bestsellers': bestsellers, 'topviews': topviews, 'small_banners': small_banners, 'cartItems': cartItems  
+        'products': products, 'medium_banners': medium_banners, 'onsales': onsales, 'bestsellers': bestsellers, 'topviews': topviews, 'small_banners': small_banners, 'cartItems': cartItems, 'order': order, 'items': items  
         }
 
     return render(request, 'home.html', context)
@@ -48,10 +48,16 @@ def service(request):
 
 
 def food(request):
+    data = cartData(request)
+
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
+
     products = Product.objects.all()
 
     context = {  
-        'products': products  
+        'products': products, 'cartItems': cartItems, 'order': order, 'items': items  
         }
 
     return render(request, 'foods.html', context)
@@ -80,7 +86,7 @@ def cart(request):
     items = data['items']
 
     context = {'items': items, 'order': order, 'cartItems': cartItems}
-    return render(request, 'cart.html')
+    return render(request, 'cart.html', context)
 
 
 
@@ -90,9 +96,10 @@ def checkout(request):
     cartItems = data['cartItems']
     order = data['order']
     items = data['items']
+    
 
     context = {'items': items, 'order': order, 'cartItems': cartItems}
-    return render(request, 'checkout.html')
+    return render(request, 'checkout.html', context)
     
 
 
