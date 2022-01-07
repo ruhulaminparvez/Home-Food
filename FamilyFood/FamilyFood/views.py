@@ -38,12 +38,36 @@ def home(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    data = cartData(request)
+
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
+
+    products = Product.objects.all()
+
+    context = {  
+        'products': products, 'cartItems': cartItems, 'order': order, 'items': items  
+        }
+
+    return render(request, 'contact.html', context)
 
 
 
 def service(request):
-    return render(request, 'service.html')
+    data = cartData(request)
+
+    cartItems = data['cartItems']
+    order = data['order']
+    items = data['items']
+
+    products = Product.objects.all()
+
+    context = {  
+        'products': products, 'cartItems': cartItems, 'order': order, 'items': items  
+        }
+
+    return render(request, 'service.html', context)
 
 
 
