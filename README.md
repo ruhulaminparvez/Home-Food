@@ -17,7 +17,7 @@ This is a Dynamic Food Delivery Website using Django & JavaScript 🥯
 
 ## Demonstration
 <p align="left">
-  <img width="780" src="Preview/demonstration.gif">
+  <img width="780" src="Preview/preview.gif">
 </p>
 
 ## Screen-Shots
