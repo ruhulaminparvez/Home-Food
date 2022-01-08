@@ -1,5 +1,5 @@
-# HomeFood
-This is a Dynamic Food Delivery Website.
+# HomeFood 🍔
+This is a Dynamic Food Delivery Website using Django & JavaScript 🥯
 
 ## Features
 - User and guest checkout capabilities.
