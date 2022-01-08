@@ -26,35 +26,35 @@ This is a Dynamic Food Delivery Website.
   <img width="780" src="Preview/HomePage.png">
 </p>
 
-<br>
+<hr>
 
 #### Foods Page
 <p align="left">
   <img width="780" src="Preview/FoodsPage.png">
 </p>
 
-<br>
+<hr>
 
 #### Cart Page
 <p align="left">
   <img width="780" src="Preview/CartPage.png">
 </p>
 
-<br>
+<hr>
 
 #### CheckOut
 <p align="left">
   <img width="780" src="Preview/CheckoutPage.png">
 </p>
 
-<br>
+<hr>
 
 #### ContactPage
 <p align="left">
   <img width="780" src="Preview/ContactPage.png">
 </p>
 
-<br>
+<hr>
 
 ## To Run This Project
 1. clone this project on your local machine,
