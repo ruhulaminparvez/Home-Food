@@ -17,33 +17,33 @@ This is a Dynamic Food Delivery Website.
 
 ## Demonstration
 <p align="left">
-  <img width="780" src="preview/demonstration.gif">
+  <img width="780" src="Preview/demonstration.gif">
 </p>
 
 ## Screen-Shots
 #### HomePage
 <p align="left">
-  <img width="780" src="preview/HomePage.png">
+  <img width="780" src="Preview/HomePage.png">
 </p>
 
 #### Foods
 <p align="left">
-  <img width="780" src="preview/FoodsPage.png">
+  <img width="780" src="Preview/FoodsPage.png">
 </p>
 
 #### Cart
 <p align="left">
-  <img width="780" src="preview/CartPage.png">
+  <img width="780" src="Preview/CartPage.png">
 </p>
 
 #### CheckOut
 <p align="left">
-  <img width="780" src="preview/CheckoutPage.png">
+  <img width="780" src="Preview/CheckoutPage.png">
 </p>
 
 #### ContactPage
 <p align="left">
-  <img width="780" src="preview/ContactPage.png">
+  <img width="780" src="Preview/ContactPage.png">
 </p>
 
 
