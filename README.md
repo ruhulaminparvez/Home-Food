@@ -26,34 +26,26 @@ This is a Dynamic Food Delivery Website.
   <img width="780" src="Preview/HomePage.png">
 </p>
 
-<hr>
 
 #### Foods Page
-<hr>
 <p align="left">
   <img width="780" src="Preview/FoodsPage.png">
 </p>
 
-<hr>
 
 #### Cart Page
-<hr>
 <p align="left">
   <img width="780" src="Preview/CartPage.png">
 </p>
 
-<hr>
 
 #### CheckOut
-<hr>
 <p align="left">
   <img width="780" src="Preview/CheckoutPage.png">
 </p>
 
-<hr>
 
 #### ContactPage
-<hr>
 <p align="left">
   <img width="780" src="Preview/ContactPage.png">
 </p>
